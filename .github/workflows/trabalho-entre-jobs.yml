@@ -34,7 +34,7 @@ jobs:
           path: strigus
 
       - name: Verificar o conteudo do diretorio
-        run: ls -lha && ./strigus/
+        run: ls -lha && ls ./strigus/
 
       - name: Acessa arquivo mensagem
         run: mv strigus/mensagem.txt . && rm -rf ./strigus
