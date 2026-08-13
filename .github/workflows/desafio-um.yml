@@ -18,3 +18,9 @@ jobs:
       
       - name: Verifica se a imagem foi baixada
         run: docker images
+      
+      - name: Executa a analise de vulnerabilidades
+        uses: docker/scout-action@v1
+        with:
+          command: cves
+          image: ${{ github.event.inputs.image }}
