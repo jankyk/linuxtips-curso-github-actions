@@ -1,0 +1,12 @@
+name: Criando nosso trigger issue
+
+on:
+  issue_comment:
+    types: [created, deleted]
+
+jobs:
+  job-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printa issue
+        run: echo "Alguma issue foi aberta/editada/deletada"
