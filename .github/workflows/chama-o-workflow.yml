@@ -1,4 +1,4 @@
-name: Chama o workflow call
+name: Chama Workflow Compartilhado
 
 on:
   workflow_dispatch:
