@@ -1,0 +1,19 @@
+name: Publicação
+
+on:
+  workflow_run:
+    workflows: [Build e Testes]
+    types:
+      - completed
+
+jobs:
+  publicacao:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Publicação
+        run: |
+          echo "Os testes foram executados com sucesso!"
+          echo "Iniciando publicação"
+          echo "Aplicação publicada com sucesso!"

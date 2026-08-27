@@ -1,0 +1,20 @@
+name: Validação de Ambiente
+
+on:
+  workflow_dispatch:
+
+jobs:
+  validacao-ambiente:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validando ambiente
+        run: |
+          echo "Validando ambiente"
+          echo "Sistema operacional: $(uname -s)"
+          echo "Arquitetura: $(uname -m)"
+          echo "Ambiente validado com sucesso!"
+
+  build-e-testes:
+    needs: validacao-ambiente
+    uses: ./.github/workflows/2-build-e-testes.yml

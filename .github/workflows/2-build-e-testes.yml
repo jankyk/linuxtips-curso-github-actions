@@ -1,0 +1,22 @@
+name: Build e Testes
+
+on:
+  workflow_call:
+
+jobs:
+  build-e-testes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          echo "Iniciando build"
+          echo "Build executado com sucesso!"
+
+      - name: Testes
+        run: |
+          echo "Executando testes"
+          echo "Todos os testes foram executados com sucesso!"
