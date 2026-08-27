@@ -1,4 +1,4 @@
-name: Workflow Compartilhado (workflow call)
+name: Workflow Compartilhado
 
 on:
   workflow_call:
