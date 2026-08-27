@@ -3,7 +3,7 @@ name: Criando nosso trigger Schedule
 on:
   schedule:
     - cron: 35 23 * * 5 # <--- Cron Fixo
-    - cron: '*/5 * * * 5'
+    - cron: '*/5 * * * 3'
 
 jobs:
   executa-schedule:
